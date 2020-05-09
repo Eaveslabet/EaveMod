@@ -31,7 +31,7 @@ namespace EaveMod.Items.Weapons
 		}
 
 		public override bool CanUseItem(Player player) {
-			return player.statMana >= 20 && player.statLife != player.statLifeMax;;
+			return player.statMana >= 20 && player.statLife != player.statLifeMax;
 		}
 		public override bool UseItem(Player player) {
 			if (!player.HasBuff(21))

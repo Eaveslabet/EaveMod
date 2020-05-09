@@ -1,5 +1,5 @@
 displayName = Eaves' Mod
 author = Eaveslabet
 version = 0.1.1
-hideCode = false
-hideResources = false
+hideCode = true
+hideResources = true
