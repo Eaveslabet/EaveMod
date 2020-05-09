@@ -4,14 +4,14 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace EaveMod.Items
+namespace EaveMod.Items.Weapons
 {
 	public class EaveSword : ModItem
 	{
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Eavestoc");
-			Tooltip.SetDefault("'Blessed by a certain lil' vampire. Or cursed..?'");
+			Tooltip.SetDefault("50% chance to heal for 3% of the damage you inflict\nEven lower chance to inflict Cursed Inferno + Shadowflames\n'Blessed by a certain lil' vampire. Or cursed..?'");
 		}
 
 		public override void SetDefaults() 

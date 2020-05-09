@@ -4,14 +4,14 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace EaveMod.Items
+namespace EaveMod.Items.Tools
 {
 	public class EmptySyringe : ModItem
 	{
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Syringe");
-			Tooltip.SetDefault("Used to siphon blood");
+			Tooltip.SetDefault("Used to siphon blood from vampiric creatures");
 		}
 
 		public override void SetDefaults() 
