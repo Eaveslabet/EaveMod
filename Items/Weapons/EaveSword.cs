@@ -20,14 +20,15 @@ namespace EaveMod.Items.Weapons
 			item.melee = true;
 			item.width = 40;
 			item.height = 40;
-			item.useTime = 12;
-			item.useAnimation = 12;
+			item.useTime = 13;
+			item.useAnimation = 13;
 			item.useStyle = 3;
 			item.knockBack = 2;
 			item.value = 22500;
 			item.rare = 8;
 			item.UseSound = SoundID.Item19;
 			item.autoReuse = true;
+			item.useTurn = true;
 		}
 
 		public override void AddRecipes() 
@@ -60,9 +61,9 @@ namespace EaveMod.Items.Weapons
 				}
 			}
 
-			if (Main.rand.Next(30) == 0){
-            	target.AddBuff(BuffID.ShadowFlame, 5 * 30);
-				target.AddBuff(BuffID.CursedInferno, 5 * 30);
+			if (Main.rand.Next(20) == 0){
+            	target.AddBuff(BuffID.ShadowFlame, 10 * 30);
+				target.AddBuff(BuffID.CursedInferno, 10 * 30);
 				Main.PlaySound(2, (int)target.Center.X, (int)target.Center.Y, 20);
         	}
         }

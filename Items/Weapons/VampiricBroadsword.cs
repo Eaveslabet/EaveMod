@@ -11,6 +11,7 @@ namespace EaveMod.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Vampiric Blade");
+			Tooltip.SetDefault("55% chance to heal for 10% of the damage you inflict");
 		}
 
 		public override void SetDefaults() 
@@ -27,6 +28,7 @@ namespace EaveMod.Items.Weapons
 			item.rare = 2;
 			item.UseSound = SoundID.Item19;
 			item.autoReuse = true;
+			item.useTurn = true;
 		}
 
 		public override void AddRecipes() 

@@ -11,7 +11,7 @@ namespace EaveMod.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Tome of Healing");
-			Tooltip.SetDefault("Restores life at a 1:2 ratio\nInflicts Mana Sickness upon use");
+			Tooltip.SetDefault("Restores life at a 1:2 ratio");
 		}
 
 		public override void SetDefaults() 
@@ -19,38 +19,44 @@ namespace EaveMod.Items.Weapons
             item.width = 28;
             item.height = 30;
             item.value = 12500;
-			item.useStyle = 5;
+			item.useStyle = 4;
 			item.useTurn = true;
 			item.autoReuse = true;
 			item.useAnimation = 15;
 			item.useTime = 15;
 			item.noMelee = true;
-			item.mana = 20;
+			item.mana = 10;
 			item.magic = true;
-			item.rare = 8;
+			item.rare = 4;
 		}
 
 		public override bool CanUseItem(Player player) {
-			return player.statMana >= 20 && player.statLife != player.statLifeMax;
+			return player.statLife != player.statLifeMax;
 		}
 		public override bool UseItem(Player player) {
-			if (!player.HasBuff(21))
+			if (!player.HasBuff(21) || !player.HasBuff(94))
 			{
-				player.statLife += 10;
-				player.HealEffect(10);
-				player.AddBuff(94, 20 * 30);
+				player.statLife += 5;
+				player.HealEffect(5);
 				return true;
 			}
 			else 
 			{
-				player.statLife += 2;
-				player.HealEffect(2);
-				player.AddBuff(94, 20 * 30);
+				player.statLife += 1;
+				player.HealEffect(1);
 				return true;
 			}
 		}
 		        public override void AddRecipes()
         {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(531, 1);
+			recipe.AddIngredient(520, 10);
+			recipe.AddIngredient(501, 5);
+			recipe.AddIngredient(5, 10);
+			recipe.AddTile(101);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
         }
 	}
 }
