@@ -31,12 +31,10 @@ namespace Nephobia.Items.Weapons
 		}
 
 		public override bool CanUseItem(Player player) {
-			return player.statLife != player.statLifeMax; 
-			// Check if the player is already Max HP. If they are, they can't use the tome.
+			return player.statLife != player.statLifeMax;
 		}
 		public override bool UseItem(Player player) {
-			if (!player.HasBuff(21) || !player.HasBuff(94)) 
-			// If player DOESN'T have Potion Sickness or Mana Sickness...
+			if (!player.HasBuff(94) && !player.HasBuff(21))
 			{
 				player.statLife += 5;
 				player.HealEffect(5);
@@ -49,7 +47,7 @@ namespace Nephobia.Items.Weapons
 				return true;
 			}
 		}
-		        public override void AddRecipes()
+		public override void AddRecipes()
         {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(531, 1);
