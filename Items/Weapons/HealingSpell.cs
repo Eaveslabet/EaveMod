@@ -31,19 +31,19 @@ namespace Nephobia.Items.Weapons
 		}
 
 		public override bool CanUseItem(Player player) {
-			return player.statLife != player.statLifeMax;
+			return player.statLife != player.statLifeMax; // Check if the player is already Max HP. If they are, they can't use the tome.
 		}
 		public override bool UseItem(Player player) {
-			if (!player.HasBuff(94) && !player.HasBuff(21))
+			if (!player.HasBuff(94) && !player.HasBuff(21)) // If player DOESN'T have Potion Sickness or Mana Sickness...
 			{
 				player.statLife += 5;
-				player.HealEffect(5);
+				player.HealEffect(5); // Heal at a regular speed.
 				return true;
 			}
-			else
+			else // If they DO have any one of those...
 			{
 				player.statLife += 1;
-				player.HealEffect(1);
+				player.HealEffect(1); // Heal at a very slow speed, discouraging abusing the tome during boss fights.
 				return true;
 			}
 		}
