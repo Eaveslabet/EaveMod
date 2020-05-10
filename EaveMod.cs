@@ -20,8 +20,6 @@ namespace EaveMod
 	public class EaveMod : Mod
 	{
 		public EaveMod()
-		{
-		}
+		{}
 	}
-
 }
