@@ -15,11 +15,11 @@ using Terraria.ModLoader;
 using Terraria.UI;
 using static Terraria.ModLoader.ModContent;
 
-namespace EaveMod
+namespace Nephobia
 {
-	public class EaveMod : Mod
+	public class Nephobia : Mod
 	{
-		public EaveMod()
+		public Nephobia()
 		{}
 	}
 }

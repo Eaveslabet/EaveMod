@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EaveMod
+namespace Nephobia
 {
     public class ModGlobalNPC : GlobalNPC
     {

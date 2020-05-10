@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace EaveMod.Items.Materials
+namespace Nephobia.Items.Materials
 {
 	public class VampiricBlood : ModItem
 	{

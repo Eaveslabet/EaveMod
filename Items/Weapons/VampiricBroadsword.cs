@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace EaveMod.Items.Weapons
+namespace Nephobia.Items.Weapons
 {
 	public class VampiricBroadsword : ModItem
 	{

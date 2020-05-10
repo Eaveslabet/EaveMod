@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace EaveMod.Items.Tools
+namespace Nephobia.Items.Tools
 {
 	public class EmptySyringe : ModItem
 	{

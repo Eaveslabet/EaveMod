@@ -1,7 +1,7 @@
-displayName = Eaves' Mod
-author = Eaveslabet
-version = 0.1.2
-homepage = https://github.com/Eaveslabet/EaveMod
+displayName = Nephobia
+author = NephoDev
+version = 0.1.3
+homepage = https://github.com/Eaveslabet/Nephobia
 hideCode = false
 hideResources = false
 includeSource = true
