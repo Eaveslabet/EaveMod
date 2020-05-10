@@ -44,6 +44,9 @@ namespace EaveMod.Items.Tools
 			if (npc.type == NPCID.CaveBat || npc.type == NPCID.JungleBat || npc.type == NPCID.Hellbat || npc.type == NPCID.GiantBat || npc.type == NPCID.IlluminantBat || npc.type == NPCID.IceBat || npc.type == NPCID.Lavabat || npc.type == NPCID.VampireBat || npc.type == NPCID.Vampire){
 				if (Main.rand.Next(8) == 0){
 					Item.NewItem(npc.getRect(), mod.ItemType("VampiricBlood"));
+					// A pretty crappy way of implenting what I had originally wanted, but it works for now.
+					// I had originally wanted the Syringe to "replace" itself with a filled variant, like the name implies.
+					// Now it just has a chance to make the NPC drop some blood lol.
 					for (int d = 0; d < 25; d++){
 						Dust.NewDust(npc.position, npc.width, npc.height, 5, 0f, -0.5f, 150, default(Color), 1f);
 					}

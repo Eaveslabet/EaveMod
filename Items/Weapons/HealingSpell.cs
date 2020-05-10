@@ -10,7 +10,7 @@ namespace EaveMod.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Tome of Healing");
+			DisplayName.SetDefault("Tome o' Medella");
 			Tooltip.SetDefault("Restores life at a 1:2 ratio");
 		}
 
@@ -18,7 +18,7 @@ namespace EaveMod.Items.Weapons
 		{
             item.width = 28;
             item.height = 30;
-            item.value = 12500;
+            item.value = 21500;
 			item.useStyle = 4;
 			item.useTurn = true;
 			item.autoReuse = true;
@@ -31,19 +31,19 @@ namespace EaveMod.Items.Weapons
 		}
 
 		public override bool CanUseItem(Player player) {
-			return player.statLife != player.statLifeMax;
+			return player.statLife != player.statLifeMax; // Check if the player is already Max HP. If they are, they can't use the tome.
 		}
 		public override bool UseItem(Player player) {
-			if (!player.HasBuff(21) || !player.HasBuff(94))
+			if (!player.HasBuff(21) || !player.HasBuff(94)) // If player DOESN'T have Potion Sickness or Mana Sickness...
 			{
 				player.statLife += 5;
-				player.HealEffect(5);
+				player.HealEffect(5); // Heal at a regular speed.
 				return true;
 			}
-			else 
+			else // If they DO have any one of those...
 			{
 				player.statLife += 1;
-				player.HealEffect(1);
+				player.HealEffect(1); // Heal at a very slow speed, discouraging abusing the tome during boss fights.
 				return true;
 			}
 		}
